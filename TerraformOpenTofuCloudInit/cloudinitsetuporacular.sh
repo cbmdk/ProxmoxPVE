@@ -5,7 +5,8 @@
 wget https://cloud-images.ubuntu.com/oracular/current/oracular-server-cloudimg-amd64.img
 
 # download libguestfs for the virt-customise tool 
-apt update -y && apt install libguestfs-tools -y
+apt update -y
+apt install libguestfs-tools -y
 
 # configure the image with qemu-guest-agent using virt customise
 virt-customize -a oracular-server-cloudimg-amd64.img --install qemu-guest-agent
